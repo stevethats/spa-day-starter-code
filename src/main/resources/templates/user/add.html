@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User Information</title>
+</head>
+<body>
+    <form method="post" th:action="@{/user}">
+        <label>
+            Username:
+            <input type="text" name="username" th:value="${username}"></br>
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email" th:value="${email}"></br>
+        </label>
+        <label>
+            Password:
+            <input type="password" name="password"></br>
+        </label>
+        <label>
+            Verify Password:
+            <input type="password" name="verify"></br>
+        </label>
+        <p th:text="${error}" style="color:red;"></p>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>
